@@ -1,0 +1,12 @@
+{
+  "name": "uniswappos-xbar-plugin",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Uniswap v3 xbar plugin bootstrap",
+  "dependencies": {
+    "ethers": "^5.7.2"
+  },
+  "scripts": {
+    "install-plugin": "node install.js"
+  }
+}
