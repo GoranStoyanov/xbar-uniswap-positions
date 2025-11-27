@@ -1,5 +1,5 @@
 # Local secrets/config
-uni/uniswappos.env
+uniswappos.env
 
 # Node.js
 node_modules

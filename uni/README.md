@@ -1,6 +1,6 @@
 # Uniswap v3 xbar plugin
 
-This xbar plugin shows Uniswap v3 NFT positions (fees, USD value, and in-range status) in the macOS menu bar.
+This xbar plugin shows Uniswap v3 NFT positions (fees, USD value, and in-range status) in the macOS menu bar. The only top-level file is `uniswappos.10m.sh`; everything else (code, config, deps, and `.gitignore`) lives inside the `uni` folder next to it.
 
 ## Prerequisite: xbar
 - Download xbar from https://xbarapp.com and install it.
@@ -8,8 +8,7 @@ This xbar plugin shows Uniswap v3 NFT positions (fees, USD value, and in-range s
 
 ## Installation
 - Copy `uniswappos.10m.sh` and the `uni` directory to your xbar Plugins folder (default `~/Library/Application Support/xbar/plugins`).
-- Run `node install.js` (or `npm run install-plugin`) once to bootstrap. It removes the README from the plugin folder and installs the npm modules into that folder. By default it installs only if `node_modules` is missing; add `--force` to reinstall.
-- Optional: call `node install.js --auto` from `uniswappos.10m.sh` if you want an automated first-run bootstrap. In `--auto` mode the script only runs when a README exists and `node_modules` is missing, so regular refreshes remain fast.
+- First run is automated: the wrapper calls `node uni/install.js --auto`, which installs npm modules into `uni/node_modules` if they are missing. To force reinstall, run `node uni/install.js --force` (or `cd uni && npm run install-plugin -- --force`).
 
 Note: because the installer deletes the README, keep a copy elsewhere (e.g., Git) if you need to refer back to these notes.
 
